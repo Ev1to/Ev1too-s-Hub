@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .circle-crop {
+            width: 180px;
+            height: 180px;
+            position: relative;
+            border-radius: 50%;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(45deg, #000B2E, #4B9FFF);
+        }
+        .circle-crop::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('cyberpunk-avatar.png') center/cover;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background: transparent;
+        }
+    </style>
+</head>
+<body>
+    <div class="circle-crop"></div>
+</body>
+</html> 
