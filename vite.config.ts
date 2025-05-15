@@ -4,7 +4,6 @@ import path from 'path'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/your-repo-name/',
   server: {
     port: 3000,
     strictPort: true,
