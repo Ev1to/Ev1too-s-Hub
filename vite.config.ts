@@ -4,7 +4,6 @@ import path from 'path'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/Ev1too-s-Hub/',
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
