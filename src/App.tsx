@@ -235,9 +235,10 @@ const Skills = () => {
 const Projects = () => {
   const projects = [
     {
-      title: 'E-commerce Platform',
+      title: 'LUXE',
       description: 'A modern e-commerce platform built with React and Node.js',
       tech: ['React', 'Node.js', 'MongoDB'],
+      link: 'https://luxe-o.netlify.app/'
     },
     {
       title: 'Task Management App',
@@ -258,7 +259,20 @@ const Projects = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project) => (
             <div key={project.title} className="bg-background p-6 rounded-lg border border-border hover:border-electric-purple transition-colors">
-              <h3 className="text-xl font-semibold mb-3">{project.title}</h3>
+              <h3 className="text-xl font-semibold mb-3">
+                {project.link ? (
+                  <a 
+                    href={project.link} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="hover:text-primary transition-colors"
+                  >
+                    {project.title}
+                  </a>
+                ) : (
+                  project.title
+                )}
+              </h3>
               <p className="text-foreground/70 mb-4">{project.description}</p>
               <div className="flex flex-wrap gap-2">
                 {project.tech.map((tech) => (
